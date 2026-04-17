@@ -1,0 +1,670 @@
+
+<html>
+<head>
+<title>Yahoo! Sports Fantasy Baseball</title>
+<script type="text/javascript" src="http://us.js1.yimg.com/us.yimg.com/lib/common/yg_csstare.js"></script>
+
+<style>
+BODY {
+	background-color: #FFFFFF;
+	font: 12px Arial, Helvetica, sans-serif;
+	color: #000000;
+}
+
+P, TD, UL, DIV, .yspgen { font: 12px Arial, Helvetica, sans-serif; }
+B { font-weight : bold; }
+
+
+.l {text-align:left !important;}
+.r {text-align:right !important;}
+.c {text-align:center !important;}
+.headlines ul {list-style-type:none;padding:3px 0 0 0;margin:0;}
+.headlines li {background-image:url(http://us.i1.yimg.com/us.yimg.com/i/spo/bullet.gif);background-repeat:no-repeat;background-position:3px 4px;padding-left:13px;margin-bottom:8px;}
+.yspgens { font-weight: normal; font-size: 11px; color: #000000; }
+.yspleadstory { font-weight: normal; font-size: 13px;  line-height: 17px; }
+.yspleadhdln { font: bold 20px Arial, Helvetica, sans-serif; color:#000000; }
+.yspsctnhdln { font: bold 18px Arial, Helvetica, sans-serif; color:#000000; }
+.yspsctnhdln2 { font: bold 13px Arial, Helvetica, sans-serif; color:#000000; }
+.yspmlbpasctnhdln { font: bold 18px Arial, Helvetica, sans-serif; color:#FFFFFF; }
+.ysptblhdr { font: bold 10px Verdana, Arial, Helvetica, sans-serif; color: #FFFFFF; }
+.ysptblsbhdr { font: 10px Verdana, Arial, Helvetica, sans-serif; color: #FFFFFF; }
+.yspdetailttl { font: bold 10px Verdana, Arial, Helvetica, sans-serif; color: #000000; }
+.yspcptnnames { font: 10px Verdana, Arial, Helvetica, sans-serif; color: #333333; }
+.yspscores { font: 10px Verdana, Arial, Helvetica, sans-serif; }
+.yspnotice { color: #636363; }
+.yspredzone { color: #CF0000; } 
+.yspartclsrc { color: #666666; }
+.ysptimedate { font: 11px Arial, Helvetica, sans-serif; color:#999999; }
+.yspwin { color: #215A08; }
+.ysploss { color: #BC1819; }
+.ysplive { color: #CC6600; }
+
+a { color: #0000FF; }
+a:visited { color: #990099; }
+a.yspgens { font-weight:normal; font-size:11px; color:#0000FF; }
+a.ysphdrnav { font-weight: bold; color: #FFFFFF; }
+a.ysphdrnav:visited { color: #FFFFFF; }
+a.yspsubhdrnav { font: bold 11px Verdana, Arial, Helvetica, sans-serif; color: #FFFFFF; }
+a.yspsubhdrnav:visited { color: #FFFFFF; }
+a.ysptblhdrlinks { font: bold 10px Verdana, Arial, Helvetica, sans-serif; color: #FFFFFF; }
+a.ysptblhdrlinks:visited { color: #FFFFFF; }
+a.ysptblsbhdr { font: 10px Verdana, Arial, Helvetica, sans-serif; color: #FFFFFF; }
+a.ysptblsbhdr:visited { color: #FFFFFF; }
+a.ysptblhdrsts { font: bold 10px Verdana, Arial, Helvetica, sans-serif; color: #0000FF; }
+a.ysptblhdrsts:visited { color: #0000FF; }
+a.yspmore { font: bold 10px Verdana, Arial, Helvetica, sans-serif; }
+a.yspinfo { font: 10px Verdana, Arial, Helvetica, sans-serif; }
+a.yspimg { color: #000000; }
+a.yspimg:visited { color: #000000; }
+
+.yspButton { width: 110; }
+.yspSlct { width: 180; }
+
+.yspwhitebg { background-color:#FFFFFF; }
+.yspblackbg { background-color: #000000; }
+.ysprtcol1 { background-color: #F6F7F2; }
+
+.yspnavbg { background-color: #F6F7F2; }
+
+.ysptblbdr1 { background-color: #333333; }
+.ysptblbdr2 { background-color: #CCCCCC; }
+.ysptblbdr3 { background-color: #999999; }
+.ysptblbdr4 { background-color: #DFE0DD; }
+
+.ysptblthmain { background-color: #666666; }
+.ysptblthmsts { background-color: #999999; }
+.ysptblthbody1 { background-color: #CCCCCC; }
+.ysptblthbody2 { background-color: #EEEEEE; }
+
+.ysptblclbg1 { background-color: #EEEEEE; }
+.ysptblclbg2 { background-color: #CCCCCC; }
+.ysptblclbg3 { background-color: #F4F5F1; }
+.ysptblclbg4 { background-color: #FFFFEE; }
+.ysptblclbg5 { background-color: #EEEEDD; }
+.ysptblclbg6 { background-color: #FFFFCC; }
+.ysptblclbg7 { background-color: #666666; }
+
+.ysprow1 { background-color: #FFFFFF; }	
+.ysprow2 { background-color: #F6F7F2; }	
+
+.yspxprthmain { background-color: #849CC6; }
+.yspxprthbody { background-color: #EFF3F9; }
+
+.ysphomegm { background-color: #E7E7C6; }
+.yspawaygm { background-color: #CECECE; }
+.ysptodaygm { background-color: #FFFF9C; }
+
+label {
+       cursor: pointer;
+       cursor: hand;
+       /* declared twice for browser differences */
+       /* notifies the user that clicking the lable selects the form */
+}
+
+/* all of the green title bars with white text; this plugs into tables that may be of another style, as it is common across many table types */
+.TableTitle{background-color:#4A5E1E !important; font:Bold 10px verdana, arial !important; color:#FFFFFF !important;}
+.TableTitle SPAN{font:Bold 10px verdana, arial !important; color:#FFFFFF !important;}
+.TableTitle TD{font:10px verdana, arial !important; color:#FFFFFF !important;}
+.TableTitle A{font:10px verdana, arial !important; color:#FFFFFF !important;}
+.TableTitle A:visited{font:10px verdana, arial !important; color:#FFFFFF !important;}
+
+H1{font:18px arial; line-height:27px; color:#4A5E1E; display:inline;}
+H2{font:bold 14px arial; color:#4A5E1E; line-height:18px; display:inline;}
+H3{font:bold 18px arial; color:#4A5C1E; line-height:18px; display:inline;}
+H4{font:bold 16px arial; color:#FF0000; line-height:15px; display:inline;}
+H5{font:bold 14px arial; color:#4C5C1B; line-height:15px; display:inline;}
+H6{font:bold 10px verdana, arial; color:#4A5C1E; line-height:13px; font-weight:bold; display:inline;}
+
+/*Use these to switch back and forth between the main and condensed type styles when necessary*/
+.typeStandard {font: 12px arial, helvetica, sans-serif;}
+.typeStandard A {font: 12px arial, helvetica, sans-serif; color:#0000FF;}
+.typeStandard A:visited {font: 12px arial, helvetica, sans-serif; color:#0000FF;}
+.typeCondensed {font:10px verdana, arial;}
+.typeCondensed A {font:10px verdana, arial; color:#0000FF;}
+.typeCondensed A:visited {font:10px verdana, arial; color:#0000FF;}
+.typeFaded {color:#999999;}
+.typeFaded A {color:#999999;}
+.typeFaded A:visited {color:#999999;}
+.typeFaded2 {color:#666666;}
+.leagueNotesTitle{font:bold 10px verdana, arial; color:#FF0000; line-height:15px; display:inline;} /*used in league_notes.php for League Notes title*/
+.titleLink A {font:18px arial; line-height:27px; color:#0000FF; display:inline;}
+.titleLink A:visited {font:18px arial; line-height:27px; color:#0000FF; display:inline;}
+
+/* Basic table definition for fantasy data tables */
+TH {font:10px verdana, arial; color:#000000; text-align:left; padding-top:2px; padding-bottom:2px;}
+TH a {color:#0000FF;}
+TH a:visited {color:#0000FF;}
+TH SPAN {color:#FFFFFF;}
+TD {font:10px verdana, arial; color:#000000;}
+TD A {color:#0000FF;}
+TD A:visited {color:#0000FF;}
+.dark{background-color:#4A5E1E;}
+.light{background-color:#688A1D;}
+.row1 {background-color: #FFFFFF;}
+.row2 {background-color: #F1F2ED;}
+.myTeamBg {background-color: #E9E9AA;}
+.ysptblclbg2{background-color: #CCCCCC;}
+.ysptblclbg5{border-left:2px solid #FFFFFF; background-color: #EEEEDD;}
+.yspmodbg{background-color:#F7F8F3;} /*light color, used in personal notes*/
+
+/* Multi-use header; apply to TR of header row where needed */
+.thStyle1 TH { background-color: #DCDDD5; font: 10px verdana, arial; color:#666666; } /*on overview page, used at row level*/
+.thStyle1 { background-color: #DCDDD5; font: 10px verdana, arial; color:#666666; } /*on overview page, used at cell level*/
+.thStyle2 { background-color: #CCCCCC; font: 10px verdana, arial; color:#666666; } /*on data tables, applied to specific th cells*/
+.cellIndent { padding-left:5px; }
+.padded1px {padding-top:1px; padding-bottom:1px; }
+.padded3px {padding-top:3px; padding-bottom:3px; }
+.right {text-align:right; padding-right:5px;}
+.center {text-align:center;}
+.greySideBottomBorder {border-bottom:1px solid #999999; border-left:1px solid #999999; border-right:1px solid #999999; }
+.blackSideBottomBorder {border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000; }
+.blackFullBorder {border:1px solid #000000;}
+.ysptblthmain A {color:#FFFFFF;}
+.ysptblthmain A:visited {color:#FFFFFF;}
+
+/* Right module table -- appears on overviwe page for R&A and League Info */
+.RightModule {background-color:#FFFFFF; border:1px solid #999999}
+.RightModule TH {border-bottom:1px solid #999999; background:URL("http://us.i1.yimg.com/us.yimg.com/i/us/sp/fn/gr/nav_back_1_2.gif"); font:bold 10px verdana, arial; color:#000000;}
+.RightModuleDetails TD {font: 12px arial, helvetica, sans-serif; border:none;}
+.RightModuleDetails .condensed {font:10px verdana, arial;}
+
+/* season standings table on the Overview page... */
+.OverviewStandingsTable {background-color: #FFFFFF; border-bottom:1px solid #999999; border-left:1px solid #999999; border-right:1px solid #999999; }
+.OverviewStandingsTable TD{font:12px arial, helvetica, sans-serif; color:#000000;}
+
+/* Applies to Team Name in the header, just below the masthead, white on green */
+.ysfntyteamtitle{font:10px verdana, arial; color:#FFFFFF;}
+
+/* left border for th in data tables; has to be added individually */
+.tbllftbdr{border-left:2px solid #FFFFFF;}
+
+.yspfntydetail{ font:10px verdana, arial; color: #000000; }
+.ysptfntysub{font:bold 10px verdana, arial; color:#000000;}
+a.ysptfntysublnk{font:bold 10px verdana, arial; color:#0000FF;}
+a.ysptfntysublnk:visited{font:bold 10px verdana, arial; color:#0000FF;}
+
+/* for pages that have the tab switching on the data table*/
+.TabBar{color:#ffffff; font:bold 10px verdana, arial;}
+.TabBar .on{color:#ffffff; font:bold 10px verdana, arial; background-color:#656565;}
+.TabBar a{color:#0000FF; font:bold 10px verdana, arial;}
+.TabBar a:visited{color:#0000FF; font:bold 10px verdana, arial;}
+
+/* ID definitions */
+#Header span{}
+#Header a{font:10px verdana, arial; color:#0000FF;}
+#Header a:visited{font:10px verdana, arial; color:#0000FF;}
+
+/* These are the header links to home help rules...etc. add to header id*/
+/* take these off the links... */
+a.ysptfntyhdrlink2{font:10px verdana, arial; color:#0000FF;}
+a.ysptfntyhdrlink2:visited{font:10px verdana, arial; color:#0000FF;}
+
+#Header #NavBar{height:18px; background: URL("http://us.i1.yimg.com/us.yimg.com/i/us/sp/fn/gr/nav_back_1.gif"); }
+#Header #NavBar a{font:bold 12px arial; color:#0000FF;}
+#Header #NavBar a:visited{font:bold 12px arial; color:#0000FF;}
+
+#TeamBlock{background-color:#F1F2ED; width:750px; height:80px; border-bottom:1px solid #666666;}
+#TeamBlock SPAN{font-weight:bold; font-size:16px; font-family:arial; color:#000000;}
+#TeamBlock TD{font:10px verdana, arial; color:#000000;}
+#TeamBlock A{font:10px verdana, arial; color:#0000FF;}
+#TeamBlock A:Visited{font:10px verdana, arial; color:#0000FF;}
+
+#DateTab TD{font:bold 12px arial; color:#000000;}
+#DateTab span{font:bold 16px arial; color:#4C5C1B;}
+#DateTab a{font:bold 12px arial; color:#0000FF;}
+#DateTab a:visited{font:bold 12px arial; color:#0000FF;}
+
+#whosHot a{color:#0000FF; font:10px verdana, arial;}
+#whosHot a:visited{color:#0000FF; font:10px verdana, arial;}
+#whosHot .title TD{background-color:#688A1D; color:#FFFFFF; font:bold 10px verdana, arial;}
+#whosHot .title A{font:10px verdana, arial; color:#FFFFFF;}
+#whoshot .title A:visited{font:10px verdana, arial; color:#FFFFFF;}
+#whosHot .tabOff{background-color: #b3b8a4; color:#FFFFFF; }
+#whosHot .tabOff a{color:#FFFFFF; font:10px verdana, arial; font-weight:bold;}
+#whosHot .tabOff a:visited{color:#FFFFFF; font:10px verdana, arial; font-weight:bold;}
+#whosHot .tabOn{background-color:#FFFFFF; color:#000000; font:10px verdana, arial; }
+
+.daysColheads {text-align:center; background-color:#FFFFFF; padding-bottom:2px; padding-top:2px; border-bottom:1px solid #000000; }
+.empty {text-align:center; background-color:#FFFFFF; padding-bottom:2px; padding-top:2px; border-bottom:1px solid #000000; border-right:1px solid #000000;}
+.inactive {text-align:center; background-color: #CCCCCC; font: 10px verdana; color:#666666;  border-bottom:1px solid #000000; border-right:1px solid #000000;}
+.active {text-align:center; background-color: #FEFE9A; font: 10px verdana; color:#0000FF; text-decoration:underline;  border-bottom:1px solid #000000; border-right:1px solid #000000; cursor:pointer;}
+.inert {text-align:center; background-color:#FFFFFF; padding-bottom:2px; padding-top:2px; border-bottom:1px solid #000000; border-right:1px solid #000000; color:#999999; }
+#timeForm {display:none;}
+#switchByTime {display:none;position:relative; }
+#switchByDate {display:inline;position:relative; }
+#switchBy SPAN {color:#000000; font:12px Arial;}
+#switchBy A {color:#0000FF; font:12px Arial;cursor:pointer;}
+#switchBy A:visited {color:#0000FF; font:12px Arial;cursor:pointer;}
+
+
+
+</style>
+
+<script language=javascript> 
+function pop(a) {
+ if (window.open) {
+  var w=window.open(a.href,a.target);
+  if (w&&w.focus) {
+    w.focus();
+    return false;
+  }
+ }
+ return true;
+}
+</script>
+</head>
+
+<body marginheight="0" marginwidth="10" topmargin="0" leftmargin="10" bgcolor="#ffffff">
+<div align="center">
+<table width="750" border="0" cellspacing="0" cellpadding="0">
+ <tr>
+  <td>
+  <!-- universal header --><style type="text/css"><!--@import url("http://us.js1.yimg.com/us.yimg.com/lib/hdr/ygma.css");body{margin:0px 4px;}--></style><div align=center id=ygma><form style="margin:0" action="http://srd.yahoo.com/fp=150500001&loc=head&st=yahoo/*http://search.yahoo.com/search" target="_top"><input type=hidden name="fr" value="ush-sports"><table width=750 cellpadding=0 cellspacing=0 border=0><tr bgcolor="#efefef"><td id=ygmalinks class=ygmabk width="100%" colspan=3><font face="arial,helvetica,sans-serif" size="-2"><a href="http://us.ard.yahoo.com/SIG=12adihsf9/M=251521.4190649.5394398.4082313/D=sports/S=96508786:HEADR/EXP=1097551424/A=1865031/R=0/SIG=10mgpruen/*http://www.yahoo.com" target="_top"><font color=000000>Yahoo!</font></a> &nbsp; <a href="http://us.ard.yahoo.com/SIG=12adihsf9/M=251521.4190649.5394398.4082313/D=sports/S=96508786:HEADR/EXP=1097551424/A=1865031/R=1/SIG=10l2nj3k8/*http://my.yahoo.com" target="_top"><font color=000000>My Yahoo!</font></a> &nbsp; <a href="http://us.ard.yahoo.com/SIG=12adihsf9/M=251521.4190649.5394398.4082313/D=sports/S=96508786:HEADR/EXP=1097551424/A=1865031/R=2/SIG=10n3m6b64/*http://mail.yahoo.com" target="_top"><font color=000000>Mail</font></a></font></td><td class=ygmatcrn><spacer type=block width=1 height=1></td><td class=ygmabk rowspan=2><img src=http://us.i1.yimg.com/us.yimg.com/i/us/search/test/stw2.gif width=38 height=16 border=0 hspace=4 alt="Search the web"></td><td id=ygmasearch class=ygmabk rowspan=2 nowrap><font face="verdana,geneva,sans-serif" size="-2"> <input type=text name=p size=12 title="Enter search terms here" maxlength=100> <input class=ygbt type=submit value=Search title=Search></font></td></tr><tr><td rowspan=2 valign=top><a href="http://us.ard.yahoo.com/SIG=12adihsf9/M=251521.4190649.5394398.4082313/D=sports/S=96508786:HEADR/EXP=1097551424/A=1865031/R=3/SIG=10pcalhda/*http://sports.yahoo.com"><img src=http://us.i1.yimg.com/us.yimg.com/i/us/sp/b/y_spts.gif id=ygmalogo width=261 height=31 border=0 alt="Yahoo! Sports"></a></td><td id=ygmagreet width="100%" rowspan=2><font face="verdana,geneva,sans-serif" size="-2">Welcome, <strong>rorytate69</strong><br>[<a href="http://us.ard.yahoo.com/SIG=12adihsf9/M=251521.4190649.5394398.4082313/D=sports/S=96508786:HEADR/EXP=1097551424/A=1865031/R=4/SIG=13gvo93hk/*http://login.yahoo.com/config/login?logout=1&.done=http%3A%2F%2Fbaseball.fantasysports.yahoo.com%2Fb1&.src=spt" target="_top">Sign Out</a>, <a href="http://us.ard.yahoo.com/SIG=12adihsf9/M=251521.4190649.5394398.4082313/D=sports/S=96508786:HEADR/EXP=1097551424/A=1865031/R=5/SIG=13dtfsj93/*http://edit.yahoo.com/config/eval_profile?.done=http%3A%2F%2Fbaseball.fantasysports.yahoo.com%2Fb1&.src=spt" target="_top">My Account</a>]<br></font></td><td rowspan=2></td><td class=ygmacrn width=13 height=14 valign=top bgcolor=efefef nowrap><spacer type=block width=13 height=14></td></tr><tr><td><spacer type=block width=1 height=1></td><td id=ygmaproplinks colspan=2 align=right><font face="verdana,geneva,sans-serif" size="-2"><a href="http://us.ard.yahoo.com/SIG=12adihsf9/M=251521.4190649.5394398.4082313/D=sports/S=96508786:HEADR/EXP=1097551424/A=1865031/R=6/SIG=10pcalhda/*http://sports.yahoo.com" target="_top">Sports Home</a> - <a href="http://us.ard.yahoo.com/SIG=12adihsf9/M=251521.4190649.5394398.4082313/D=sports/S=96508786:HEADR/EXP=1097551424/A=1865031/R=7/SIG=1109lmicu/*http://fantasysports.yahoo.com" target="_top">Fantasy Home</a></font></td></tr></table></form></div><!-- /universal header -->    </td>
+ </tr>
+</table>
+<iframe src="http://view.atdmt.com/SF1/iview/yhxxxstu00100039sf1/direct/01/&time=1097465024144738?click=http://us.ard.yahoo.com/SIG=1265tcsj2/M=313379.5454985.6537937.1332534/D=sports/S=96508786:N/EXP=1097551424/A=2357519/R=0/*" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" topmargin="0" leftmargin="0" width="728" height="90"><script language="JavaScript" type="text/javascript">document.write('<a href="http://us.ard.yahoo.com/SIG=1265tcsj2/M=313379.5454985.6537937.1332534/D=sports/S=96508786:N/EXP=1097551424/A=2357519/R=1/SIG=12ieo7rbf/*http://clk.atdmt.com/SF1/go/yhxxxstu00100039sf1/direct/01/&time=1097465024144738" target="_blank"><img src="http://view.atdmt.com/SF1/view/yhxxxstu00100039sf1/direct/01/&time=1097465024144738"/></a>');</script><noscript><a href="http://us.ard.yahoo.com/SIG=1265tcsj2/M=313379.5454985.6537937.1332534/D=sports/S=96508786:N/EXP=1097551424/A=2357519/R=2/SIG=12ieo7rbf/*http://clk.atdmt.com/SF1/go/yhxxxstu00100039sf1/direct/01/&time=1097465024144738" target="_blank"><img border="0" src="http://view.atdmt.com/SF1/view/yhxxxstu00100039sf1/direct/01/&time=1097465024144738" /></a></noscript></iframe><table width="750" border="0" cellspacing="0" cellpadding="0"><tr><td height="5"></td></tr></table>
+<table id="Header" class="yspblackbg" width="750" border="0" cellspacing="0" cellpadding="0" style="border-top:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000;">
+ <tr>
+  <td>
+   <table class="dark" width="100%" border="0" cellspacing="0" cellpadding="0">
+    <tr>
+     <td height="17" >&nbsp;&nbsp;<span class="ysfntyteamtitle">2004 Money Pool&nbsp;&nbsp;(ID# 276009)</span></td>
+     <td width="27" bgcolor="#ffffff" background="http://us.i1.yimg.com/us.yimg.com/i/us/sp/fn/gr/nav_back_1.gif"><img src="http://us.i1.yimg.com/us.yimg.com/i/us/sp/fn/gr/nav_back_fn_base_1b.gif" width="27" height="17" alt="" border="0"></td>
+     <td align="center" width="148" background="http://us.i1.yimg.com/us.yimg.com/i/us/sp/fn/gr/nav_back_1.gif"><a href="/b1" class="ysptfntyhdrlink2">Home</a>&nbsp;&nbsp;-&nbsp;&nbsp;<a href="http://help.yahoo.com/help/baseball/" class="ysptfntyhdrlink2">Help</a>&nbsp;&nbsp;-&nbsp;&nbsp;<a class="ysptfntyhdrlink2" href="http://help.yahoo.com/help/us/baseball/brules/index.html">Rules</a><img src="http://mds.centrport.net/mdsefc?a2125;MGMC9B4C3932P271602B271587S0&time=%time2%" height="1" width="1" border="0" alt=" "></td>
+    </tr>
+   </table>
+   <table class="light" width="100%" border="0" cellspacing="0" cellpadding="0">
+    <tr>
+     <td height="62" align="center"><a href="/b1"><img src="http://us.i1.yimg.com/us.yimg.com/i/us/sp/fn/gr/fbase_2_748x62.jpg" border="0" width="748" height="62" alt="GMC Fantasy Baseball"></a></td>
+    </tr>
+   </table>
+  </td>
+ </tr>
+</table><table width="750" border="0" cellspacing="0" cellpadding="0">
+ <tr>
+  <td>
+   
+<script language="JavaScript">
+//window.document.domain = "yahoo.com";
+var remote=null;
+function rs(n,u,w,h,x,no) {
+if ( no == 1 ) {
+  remote=window.open(u,n,'width='+w+',height='+h+',resizable=no,scrollbars=no,status=0');
+}
+else {
+  remote=window.open(u,n,'width='+w+',height='+h+',resizable=yes,scrollbars=yes,status=0');
+}
+if (remote != null) {
+remote.focus();
+if (remote.opener == null )
+remote.opener = self;
+}
+if (x==1){return remote;}
+}
+</script>
+
+
+<table id="Header" class="blackSideBottomBorder" width="750" border="0" cellspacing="0" cellpadding="0">
+ <tr>
+  <td>
+   <table background="http://us.i1.yimg.com/us.yimg.com/i/us/sp/fn/gr/nav_back_1_2.gif" width="100%" border="0" cellspacing="0" cellpadding="0">
+    <tr id="NavBar" align="center" valign="middle">
+     <td nowrap>&nbsp;&nbsp;<a href="/b1/276009">League</a>&nbsp;&nbsp;</td>
+     <td><img src="http://us.i1.yimg.com/us.yimg.com/i/us/sp/fn/gr/hdr_div_1.gif" width="2" height="15" alt="" border="0"></td>
+     <td nowrap>&nbsp;&nbsp;<a href="/b1/276009/2">My Team</a>&nbsp;&nbsp;</td>
+     <td><img src="http://us.i1.yimg.com/us.yimg.com/i/us/sp/fn/gr/hdr_div_1.gif" width="2" height="15" alt="" border="0"></td>
+           <td nowrap>&nbsp;&nbsp;<a href="/b1/276009/standings">Standings</a>&nbsp;&nbsp;</td>
+          <td><img src="http://us.i1.yimg.com/us.yimg.com/i/us/sp/fn/gr/hdr_div_1.gif" width="2" height="15" alt="" border="0"></td>
+     <td nowrap>&nbsp;&nbsp;<a href="/b1/276009/players">Players</a>&nbsp;&nbsp;</td>
+     <td><img src="http://us.i1.yimg.com/us.yimg.com/i/us/sp/fn/gr/hdr_div_1.gif" width="2" height="15" alt="" border="0"></td>
+     <td nowrap>&nbsp;&nbsp;<a href="/b1/276009/research">Research &amp; Analysis</a>&nbsp;&nbsp;</td>
+     <td><img src="http://us.i1.yimg.com/us.yimg.com/i/us/sp/fn/gr/hdr_div_1.gif" width="2" height="15" alt="" border="0"></td>
+     <td nowrap>&nbsp;&nbsp;<a href="javascript:rs( 'stattracker_276009','/b1/276009/loadstattracker',711,590,0)">StatTracker <sup style="font:8px Arial;">TM</sup></a>&nbsp;&nbsp;</td>
+     <td><img src="http://us.i1.yimg.com/us.yimg.com/i/us/sp/fn/gr/hdr_div_1.gif" width="2" height="15" alt="" border="0"></td>
+     <td nowrap><spacer type=block width=1 height=1></td>
+    </tr>
+   </table>
+  </td>
+ </tr>
+</table>
+<table class="dark blackSideBorder" width="750" border="0" cellspacing="0" cellpadding="0">
+ <tr>
+  <td height="5"><spacer type="block" width="100%" height="5"></td>
+ </tr>
+</table>
+
+<table width="750" border="0" cellspacing="0" cellpadding="0">
+ <tr>
+  <td width="500" valign="top">
+   
+<div style="height:15;"><spacer type=block width=1 height=15></div>
+<h1>Overview: 2004 Money Pool</h1><br>
+
+
+
+
+<table class="TableTitle" width="100%" border="0" cellspacing="0" cellpadding="0">
+ <tr>
+  <td height="18" nowrap>&nbsp;<span>Season Standings</span></td>
+  <td align="right"><a href="/b1/276009/standings">View Complete Standings</a>&nbsp;</td>
+ </tr>
+</table>
+<table class="OverviewStandingsTable" width="100%" border="0" cellspacing="0" cellpadding="0">
+ <tr class="thStyle1" height="17">
+  <th class="Left">&nbsp;Rank</th>
+  <th class="Left">Team</th>
+  <th class="Right">Points</th>
+  <th class="Right">Pts Change</th>
+  <th class="Right">Waiver</th>
+  <th class="Right">Moves&nbsp;</th>
+ </tr>
+ <tr height="17"><td class="Left">&nbsp;1</td><td class="Left"><a href="http://edit.yahoo.com/config/send_webmesg?.target=mikeygee8"><img src="http://opi.yahoo.com/online?u=mikeygee8&m=g" alt="" width=12 height=12 border=0></a> <a href="/b1/276009/4">mikeygee</a></td><td class="Right">27615.00</td><td class="Right"><font color="green">+329</font></td><td class="Right">5</td> <td class="Right">25&nbsp;</td> </tr> <tr height="17"><td class="Left">&nbsp;2</td><td class="Left"><a href="http://edit.yahoo.com/config/send_webmesg?.target=beldo_pig"><img src="http://opi.yahoo.com/online?u=beldo_pig&m=g" alt="" width=12 height=12 border=0></a> <a href="/b1/276009/1">IronHogs</a></td><td class="Right">24835.00</td><td class="Right"><font color="green">+83</font></td><td class="Right">8</td> <td class="Right">19&nbsp;</td> </tr> <tr height="17"><td class="Left">&nbsp;3</td><td class="Left"><a href="http://edit.yahoo.com/config/send_webmesg?.target=beldo76"><img src="http://opi.yahoo.com/online?u=beldo76&m=g" alt="" width=12 height=12 border=0></a> <a href="/b1/276009/8">reigning champ</a></td><td class="Right">24689.00</td><td class="Right"><font color="green">+3</font></td><td class="Right">1</td> <td class="Right">22&nbsp;</td> </tr> <tr height="17" class=myTeamBg><td class="Left">&nbsp;4</td><td class="Left"><a href="http://edit.yahoo.com/config/send_webmesg?.target=rorytate69"><img src="http://opi.yahoo.com/online?u=rorytate69&m=g" alt="" width=12 height=12 border=0></a> <a href="/b1/276009/2">Just got feet</a></td><td class="Right">24514.00</td><td class="Right"><font color="green">+244</font></td><td class="Right">7</td> <td class="Right">38&nbsp;</td> </tr> <tr height="17"><td class="Left">&nbsp;5</td><td class="Left"><a href="http://edit.yahoo.com/config/send_webmesg?.target=really_phat_bastard"><img src="http://opi.yahoo.com/online?u=really_phat_bastard&m=g" alt="" width=12 height=12 border=0></a> <a href="/b1/276009/7">Cambodians</a></td><td class="Right">24418.00</td><td class="Right"><font color="green">+64</font></td><td class="Right">2</td> <td class="Right">36&nbsp;</td> </tr> <tr height="17"><td class="Left">&nbsp;6</td><td class="Left"><a href="http://edit.yahoo.com/config/send_webmesg?.target=proboscis2"><img src="http://opi.yahoo.com/online?u=proboscis2&m=g" alt="" width=12 height=12 border=0></a> <a href="/b1/276009/3">UnderDawg</a></td><td class="Right">23891.00</td><td class="Right"><font color="green">+104</font></td><td class="Right">6</td> <td class="Right">17&nbsp;</td> </tr> <tr height="17"><td class="Left">&nbsp;7</td><td class="Left"><a href="http://edit.yahoo.com/config/send_webmesg?.target=spydy_17"><img src="http://opi.yahoo.com/online?u=spydy_17&m=g" alt="" width=12 height=12 border=0></a> <a href="/b1/276009/6">Spidey's Team</a></td><td class="Right">23443.00</td><td class="Right"><font color="red">-29</font></td><td class="Right">3</td> <td class="Right">36&nbsp;</td> </tr> <tr height="17"><td class="Left">&nbsp;8</td><td class="Left"><a href="http://edit.yahoo.com/config/send_webmesg?.target=niceguy19_11"><img src="http://opi.yahoo.com/online?u=niceguy19_11&m=g" alt="" width=12 height=12 border=0></a> <a href="/b1/276009/5">stealinhome</a></td><td class="Right">19692.00</td><td class="Right"><font color="green">+35</font></td><td class="Right">4</td> <td class="Right">20&nbsp;</td> </tr> 
+ <tr class="ysmlbfntyseastd" height="17">
+  <td colspan="6">
+   <table border="0" width="100%">
+    <tr>
+     <td width="12" valign="center" align="right"><img src="http://us.i1.yimg.com/us.yimg.com/i/ws/ic/messenger1.gif" alt="" border=0></td>
+     <td valign="center" align="left"><span class="typeCondensed">= on Yahoo! Messenger now</span></td>
+    </tr>
+   </table>
+  </td>
+ </tr>
+</table>
+
+<div style="height:20px;"><spacer type=block width=1 height=20></div>
+
+<table class="TableTitle" width="100%" border="0" cellspacing="0" cellpadding="0">
+ <tr>
+  <td height="18" nowrap>&nbsp;<span>Recent Transactions</span></td>
+  <td align="right"><a href="/b1/276009/transactions">View All</a>&nbsp;</td>
+ </tr>
+</table>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+ <tr class="thStyle1" height="17">
+  <th width="5"><spacer type=block width=1 height=1></th>
+  <th width="40">Date</th>
+  <th width="275">Player</th>
+  <th width="75">Type</th>
+  <th width="175">From</th>
+  <th width="175">To</th>
+  <th width="5"><spacer type=block width=1 height=1></th>
+ </tr>
+ <tr height="17"><td><spacer type=block width=1 height=1></td><td colspan="5">No transactions in last 7 days</td><td><spacer type=block width=1 height=1></td></tr> <tr height="22">
+  <td colspan="8"><b>Related Links:</b> <a href="/b1/276009/players">Players</a> | <a href="http://sports.yahoo.com/mlb/injuries" target="sports">Injuries</a> | <a href="/b1/276009/research">Research & Analysis</a> </td>
+ </tr>
+</table>
+
+<div style="height:20px;"><spacer type=block width=1 height=20></div>
+
+<table class="TableTitle" width="100%" border="0" cellspacing="0" cellpadding="0">
+ <tr height="18">
+  <td nowrap>&nbsp;<span>Recent Messages</span></td>
+  <td align="right" style="color:#FFFFFF"><a href="/b1/276009/postmessage">Post</a> - <a href="/b1/276009/messages">View All</a>&nbsp;</td>
+ </tr>
+</table>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+ <tr class="thStyle1" height="18">
+  <th>&nbsp;Date</th>
+  <th>Time (EDT)</th>
+  <th>Message</th>
+  <th>Team&nbsp;</th>
+ </tr>
+ <tr class="row1" height="17"><td>&nbsp;10/4</td><td>11:33 am</td><td>413&nbsp;<a href="/b1/276009/message?msgid=413">lucky</a></td><td>Just got feet&nbsp;</td></tr><tr class="row2" height="17"><td>&nbsp;10/3</td><td>8:10 pm</td><td>412&nbsp;<a href="/b1/276009/message?msgid=412">I won!</a></td><td>mikeygee&nbsp;</td></tr><tr class="row1" height="17"><td>&nbsp;10/3</td><td>7:31 pm</td><td>411&nbsp;<a href="/b1/276009/message?msgid=411">Matt, you're worse than Steve!</a></td><td>UnderDawg&nbsp;</td></tr><tr class="row2" height="17"><td>&nbsp;10/3</td><td>6:28 pm</td><td>410&nbsp;<a href="/b1/276009/message?msgid=410">Frick You!</a></td><td>IronHogs&nbsp;</td></tr><tr class="row1" height="17"><td>&nbsp;9/25</td><td>8:52 am</td><td>409&nbsp;<a href="/b1/276009/message?msgid=409">Change</a></td><td>Cambodians&nbsp;</td></tr></table>
+
+<div style="height:20px;"><spacer type=block width=1 height=20></div>
+<table>
+ <tr>
+  <td>
+   <table width="332" border="0" cellspacing="0" cellpadding="0">
+    <tr>
+     <td class="ysptblbdr1"> 
+      <table class="TableTitle" width="332" border="0" cellspacing="0" cellpadding="0">
+       <tr>
+        <td height="18" nowrap>&nbsp;<span>Major League Baseball Information</span></td>
+       </tr>
+      </table>
+      <table class="yspwhitebg" bgcolor="#ffffff" width="332" border="0" cellspacing="0" cellpadding="5" style=" border-bottom:1px solid #999999; border-left:1px solid #999999; border-right:1px solid #999999;">
+       <tr>
+        <td valign="top"> <b>News and resources from Yahoo! Sports</b><br>
+         <table width="90%">
+          <tr class="typeStandard">
+           <td width="50%">
+            <li><a href="http://sports.yahoo.com/mlb" class="yspgens">News</a>
+            <li><a href="http://sports.yahoo.com/mlb/expertscorner" class="yspgens">Experts</a>
+            <li><a href="http://sports.yahoo.com/mlb/scoreboard" class="yspgens">Scores</a>
+            <li><a href="http://sports.yahoo.com/mlb/standings" class="yspgens">Standings</a>
+           </td>
+           <td width="50%">
+            <li><a href="http://sports.yahoo.com/mlb/stats" class="yspgens">Stats</a>
+            <li><a href="http://sports.yahoo.com/mlb/teams" class="yspgens">Teams</a>
+            <li><a href="http://sports.yahoo.com/mlb/players" class="yspgens">Players</a>
+            <li><a href="http://sports.yahoo.com/mlb/injuries" class="yspgens">Injuries</a>
+           </td>
+          </tr>
+         </table>
+        </td>
+       </tr>
+      </table>
+     </td>
+    </tr>
+   </table>
+  </td>
+  <td width="10"></td>
+  <td><table border=0 cellpadding=0 cellspacing=0 width="100%">
+ <tr><td align=center>
+
+  <a href="http://football.fantasysports.yahoo.com/college"><img src="http://us.i1.yimg.com/us.yimg.com/i/us/sp/fn/gr/ncaaf_pick_160x112_2.gif" alt="College Football Pick'em" width="160" height="112" border="0"></a>
+
+ </td></tr>
+</table></td>
+ </tr>
+</table>
+
+  </td>
+  <td width="10" valign="top"><img src="http://us.i1.yimg.com/us.yimg.com/i/us/sp/fn/gr/fn_mlb_tri.gif" width="10" height="9" alt="" border="0"></td>
+  <td width="240" valign="top" class="row2">
+   <table width="100%" border="0" cellspacing="0" cellpadding="4" class="dark">
+    <tr>
+     <td align="center">
+      <!-- SpaceID=96508786 loc=REC noad -->
+     </td>
+    </tr>
+   </table>
+   
+<table class="dark" width="100%" border="0" cellspacing="0" cellpadding="4"> 
+ <tr> 
+  <td align="center" valign="top"> 
+             
+   
+<style>
+DIV {font:10px verdana;}
+.imageHolder {padding-bottom:3px;}
+.finalResults {width:140px; height:auto; background:#F1F2ED; font:10px Verdana, Arial, Helvetica, sans-serif; border:1px solid #666666;}
+</style>
+
+<div class="finalResults" id="finalResults"> 
+ <div class="indent"> 
+ <div class="imageHolder cellIndent padded3px"><img src="http://us.i1.yimg.com/us.yimg.com/i/us/sp/fn/gr/final_results.gif" border="0" alt="" height="12" width="88"></div> 
+ <div class="cellIndent padded3px"> <b>1st</b><br> mikeygee<br></div> 
+ <div class="cellIndent padded3px"> <b>2nd</b><br> IronHogs<br></div> 
+ <div class="cellIndent padded3px"> <b>3rd</b><br> reigning champ</div> 
+ </div>
+
+   <div style="height:7px"><spacer type=block width="100%" height=7></div> 
+   
+<table width="100%" border="0" cellspacing="0" cellpadding="0" class="yspwhitebg">
+ <tr>
+  <td height="25" align="center"><span class="typeStandard"><a href="/b1/premiumaddons">Get live scoring with StatTracker&#153;</a></span></td>
+ </tr>
+</table>
+
+   <div style="height:4px;"><spacer type=block width="100%" height=4></div>
+
+  </td>
+ </tr>
+</table>
+
+
+
+<table class="row2" width="100%" border="0" cellspacing="0" cellpadding="0"> 
+ <tr> 
+  <td>
+   <div style="height:8px;"><spacer type=block width="100%" height=8></div> 
+   <table class="RightModule" width="100%" cellspacing="0"> 
+    <tr> 
+     <th> &nbsp;Research &amp; Analysis</th> 
+    </tr> 
+    <tr> 
+     <td>
+      <table class="RightModuleDetails" width="100%" border="0" cellspacing="0" cellpadding="0"> 
+       <tr> 
+        <td valign="top">
+         <table> 
+          <tr> 
+           <td height="2"></td> 
+           <td></td> 
+          </tr> 
+          <tr valign="top"><td>&nbsp;&nbsp;&#149;</td><td><a href="/b1/276009/kfflnewsletter">Fantasy Newsletter</a> <br><span class="typeCondensed">KFFL's comprehensive newsletter provides the most detailed analysis around</span></td></tr><tr><td height="5"></td><td></td></tr><tr valign="top"><td>&nbsp;&nbsp;&#149;</td><td><a href="/b1/276009/playernotes">Player Notes</a> <br><span class="typeCondensed">All the scoop from Fanball, KFFL and more</span></td></tr><tr><td height="5"></td><td></td></tr><tr valign="top"><td>&nbsp;&nbsp;&#149;</td><td><a href="http://sports.yahoo.com/mlb/injuries" target="sports">Injury Report</a> <br><span class="typeCondensed">All the injury info from around the majors</span></td></tr><tr><td height="5"></td><td></td></tr><tr valign="top"><td>&nbsp;&nbsp;&#149;</td><td><a href="/b1/276009/teamlog">Team Log</a> <br><span class="typeCondensed">Complete info on all players on all teams</span></td></tr><tr><td height="5"></td><td></td></tr>          <tr> 
+           <td></td> 
+           <td class="condensed">
+            <a href="/b1/276009/players">Search For a Player</a><br> 
+            <a href="/b1/276009/research">View all Research &amp; Analysis</a> 
+           </td> 
+          </tr> 
+         </table>
+        </td> 
+       </tr> 
+      </table>
+     </td> 
+    </tr> 
+   </table> 
+  </td>
+ </tr>
+</table>
+<div style="height:5px"><spacer type=block width="100%" height="5"></div>
+
+
+<table class="row2" width="100%" border="0" cellspacing="0" cellpadding="0"> 
+ <tr> 
+  <td>
+   <div style="height:5px;"><spacer type=block width="100%" height=5></div> 
+   <table class="RightModule" width="100%" cellspacing="0"> 
+    <tr><th> &nbsp;League Info</th></tr> 
+    <tr> 
+     <td>
+      <table class="RightModuleDetails" width="100%" border="0" cellspacing="0" cellpadding="0"> 
+       <tr> 
+        <td valign="top">
+         <table> 
+          <tr> 
+           <td height="2"></td> 
+           <td></td> 
+          </tr> 
+                    <tr valign="top"> 
+           <td>&nbsp;&nbsp;&#149;</td> 
+           <td>
+            <a href="/b1/276009/settings">League Settings</a><br> 
+            <span class="typeCondensed">View all of your league settings</span>
+           </td> 
+          </tr> 
+          <tr> 
+           <td height="5"></td> 
+           <td></td> 
+          </tr> 
+          <tr valign="top"> 
+           <td>&nbsp;&nbsp;&#149;</td> 
+           <td>
+                        <a href="/b1/276009/teams">Teams & Manager List</a><br> 
+            <span class="typeCondensed">Get details on the teams in this league</span>
+                       </td> 
+          </tr> 
+          <tr> 
+           <td height="5"></td> 
+           <td></td> 
+          </tr> 
+          <tr valign="top"> 
+           <td>&nbsp;&nbsp;&#149;</td> 
+           <td>
+                         <a href="/b1/276009/emailleague">Email League</a><br> 
+             <span class="typeCondensed">Send mail to other managers in this league</span>
+                       </td> 
+          </tr> 
+          <tr> 
+           <td height="5"></td> 
+           <td></td> 
+          </tr> 
+          <tr> 
+           <td></td> 
+           <td class="condensed"> <a href="/b1/276009/tools">All League Tools</a></td> 
+          </tr> 
+         </table>
+        </td> 
+       </tr> 
+      </table>
+     </td> 
+    </tr> 
+   </table>
+  </td> 
+ </tr> 
+</table>
+<div style="height:5px"><spacer type=block width="100%" height="5"></div>
+  </td>
+ </tr>
+</table>
+  </td>
+ </tr>
+</table>
+<div style="height:15px;"></div>
+
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+ <tr>
+  <td height="7"></td>
+ </tr>
+</table>
+<table width="750" border="0" cellspacing="0" cellpadding="0" class="ysptblclbg1">
+ <tr>
+  <td class="ysptblclbg2"></td>
+ </tr>
+ <tr>
+  <td align="center">
+   <form name="f" style="margin-bottom:0;margin-top:0" action="http://sports.yahoo.com/search">
+   <table border="0" cellspacing="0" cellpadding="0">
+    <tr>
+     <td height="40"><b>Search:</b>&nbsp;
+      <select name="type" size="1">
+      <option value="sports">Yahoo! Sports</option>
+      <option value="news">Yahoo! News</option>
+      <option value="yahoo">The Web</option>
+      </select>&nbsp;for&nbsp;
+      <input size=30 name=p>&nbsp;<input type=submit value=Search>&nbsp;&nbsp;
+     </td>
+    </tr>
+   </table>
+  </form>
+  </td>
+ </tr>
+ <tr>
+  <td class="ysptblclbg2"></td>
+ </tr>
+</table>
+<table border=0 cellpadding="0" cellspacing="0" width="750"><tr><td>
+<table border=0 cellpadding="0" cellspacing="0" width="100%">
+<tr><td colspan="2"><hr size=0></td></tr>
+<tr><td width="99%" valign="top">
+Copyright &copy; 2004 Yahoo! Inc. All rights reserved. <a href="http://docs.yahoo.com/info/terms/">Terms of Service</a> - <a href="http://help.yahoo.com/help/baseball/">Help</a><br>
+Portions Copyright &copy; 2004 <a href="http://www.bigleaguers.com">MLBPA</a>, Official Licensee Major League Baseball Players Association.<br>
+Portions Copyright &copy; 2004 <a href="http://www.stats.com">STATS, Inc.</a> All rights reserved.<br>
+Portions Copyright &copy; 2004 <a href="http://www.sportsticker.com">SportsTicker Enterprises LP.</a> All rights reserved.<br>
+NOTICE: We collect personal information on this site. To learn more about how we use your information, see our <a href="http://privacy.yahoo.com/privacy/us/sports/">Privacy Policy</a>
+</td>
+<td width="1%">
+<a href="http://www.bigleaguers.com"><img alt="MLBPA" border=0 src="http://us.i1.yimg.com/us.yimg.com/i/spo/fan/playerschoice.gif" width=80 height=76></a>
+</td>
+</tr></table>
+</td></tr></table>
+<br>
+</div>
+</body>
+</html>
+
+<!-- p34.sports.scd.yahoo.com uncompressed/chunked Sun Oct 10 20:23:44 PDT 2004 -->

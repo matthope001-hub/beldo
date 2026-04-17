@@ -1,0 +1,63 @@
+.linkz1 A:link {
+	FONT: bold 11px Arial, Helvetica, sans-serif; COLOR: #ffffff; TEXT-DECORATION: none
+}
+.stdlink {
+	TEXT-DECORATION: none
+}
+.PhotoCredit {
+	FONT-WEIGHT: normal; FONT-SIZE: 10px; COLOR: #000000; FONT-FAMILY: Verdana, Arial, Sans-Serif, MS Sans-Serif; TEXT-ALIGN: right
+}
+.PhotoCaption {
+	FONT-WEIGHT: normal; FONT-SIZE: 10px; COLOR: #000000; FONT-FAMILY: Verdana, Arial, Sans-Serif, MS Sans-Serif; TEXT-ALIGN: left
+}
+.linkz1 A:active {
+	FONT: bold 11px Arial, Helvetica, sans-serif; COLOR: #ffeeee; TEXT-DECORATION: underline
+}
+.linkz1 A:visited {
+	FONT: bold 11px Arial, Helvetica, sans-serif; COLOR: #ffffff; TEXT-DECORATION: none
+}
+.linkz1 A:hover {
+	FONT: bold 11px Arial, Helvetica, sans-serif; COLOR: #ffffff; TEXT-DECORATION: underline
+}
+.linkz2 A:link {
+	FONT: bold 11px Arial, Helvetica, sans-serif; COLOR: #000066; TEXT-DECORATION: none
+}
+.linkz2 A:active {
+	FONT: bold 11px Arial, Helvetica, sans-serif; COLOR: #000066; TEXT-DECORATION: underline
+}
+.linkz2 A:visited {
+	FONT: bold 11px Arial, Helvetica, sans-serif; COLOR: #000066; TEXT-DECORATION: none
+}
+.linkz2 A:hover {
+	FONT: bold 11px Arial, Helvetica, sans-serif; COLOR: #000066; TEXT-DECORATION: underline
+}
+.lftnavhed {
+	FONT-WEIGHT: bolder; FONT-SIZE: 12px; COLOR: #cc0000; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif
+}
+.ListTD {
+	FONT-SIZE: 10px; FONT-FAMILY: Verdana, Arial, Sans-Serif, MS Sans-Serif; HEIGHT: 10px; BACKGROUND-COLOR: #ffffff; TEXT-ALIGN: left
+}
+.linkz2b A:link {
+	FONT: bold 11px Arial, Helvetica, sans-serif; COLOR: #000066; TEXT-DECORATION: none
+}
+.linkz2b A:active {
+	FONT: bold 11px Arial, Helvetica, sans-serif; COLOR: #000066; TEXT-DECORATION: underline
+}
+.linkz2b A:visited {
+	FONT: bold 11px Arial, Helvetica, sans-serif; COLOR: #000066; TEXT-DECORATION: none
+}
+.linkz2b A:hover {
+	FONT: bold 11px Arial, Helvetica, sans-serif; COLOR: #000066; TEXT-DECORATION: underline
+}
+.weather2 A:link {
+	FONT-WEIGHT: bold; FONT-SIZE: 10px; COLOR: #ffffff; FONT-FAMILY: verdana,arial,sans-serif; TEXT-DECORATION: none
+}
+.weather2 A:active {
+	FONT-WEIGHT: bold; FONT-SIZE: 10px; COLOR: #ffffff; FONT-FAMILY: verdana,arial,sans-serif; TEXT-DECORATION: underline
+}
+.weather2 A:visited {
+	FONT-WEIGHT: bold; FONT-SIZE: 10px; COLOR: #ffffff; FONT-FAMILY: verdana,arial,sans-serif; TEXT-DECORATION: none
+}
+.weather2 A:hover {
+	FONT-WEIGHT: bold; FONT-SIZE: 10px; COLOR: #ffffff; FONT-FAMILY: verdana,arial,sans-serif; TEXT-DECORATION: underline
+}

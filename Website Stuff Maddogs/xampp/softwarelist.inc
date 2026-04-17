@@ -1,0 +1,16 @@
+<a href="http://httpd.apache.org">Apache HTTPD</a>,
+<a href="http://www.mysql.org">MySQL</a>,
+<a href="http://www.php.net">PHP</a>,
+<a href="http://www.cpan.org/">Perl</a>,
+<a href="http://filezilla.sourceforge.net/">FileZilla FTP Server</a>,
+<a href="http://www.phpmyadmin.net">phpMyAdmin</a>,
+<a href="http://www.openssl.org">OpenSSL</a>,
+<a href="http://www.freetype.org">Freetype</a>,
+<a href="http://www.mrunix.net/webalizer/">Webalizer</a>,
+<a href="http://perl.apache.org">mod_perl</a>,
+<a href="http://turck-mmcache.sourceforge.net/">Turck MMCache</a>,
+<a href="http://mcrypt.sourceforge.net/">mcrypt</a>,
+<a href="http://www.hwaci.com/sw/sqlite/">SQLite</a>,
+<a href="http://www.aditus.nu/jpgraph/">JpGraph</a>
+<a href="http://www.pmail.com/overviews/ovw_mercury.htm">Mercury Mail Transport System</a>
+<a href="http://www.priadoblender.com">PHPBlender PHP Compiler</a>
